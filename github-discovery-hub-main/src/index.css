@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GitHub Discovery Hub Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 213 31% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 31% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 31% 9%;
+
+    /* GitHub-inspired blues */
+    --primary: 212 100% 48%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 212 100% 65%;
+
+    --secondary: 210 17% 96%;
+    --secondary-foreground: 213 31% 9%;
+
+    --muted: 210 17% 96%;
+    --muted-foreground: 215 12% 52%;
+
+    --accent: 212 100% 95%;
+    --accent-foreground: 212 100% 48%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 14% 90%;
+    --input: 214 14% 90%;
+    --ring: 212 100% 48%;
+
+    /* GitHub theme colors */
+    --github-green: 110 100% 28%;
+    --github-orange: 28 100% 52%;
+    --github-purple: 262 84% 58%;
+    --github-red: 0 84% 60%;
+    --github-blue: 212 100% 48%;
+    
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--primary-glow) / 0.05));
+    
+    /* Shadows with primary color */
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.15);
+    --shadow-card: 0 4px 6px -1px hsl(var(--primary) / 0.1), 0 2px 4px -1px hsl(var(--primary) / 0.06);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 213 31% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 215 28% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 28% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 212 100% 55%;
+    --primary-foreground: 213 31% 6%;
+    --primary-glow: 212 100% 70%;
+
+    --secondary: 217 19% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 217 19% 15%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 217 19% 15%;
+    --accent-foreground: 212 100% 55%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 217 19% 15%;
+    --input: 217 19% 15%;
+    --ring: 212 100% 55%;
+
+    /* Dark theme gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--primary-glow) / 0.05));
+    
+    /* Dark theme shadows */
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 4px 6px -1px hsl(var(--primary) / 0.2), 0 2px 4px -1px hsl(var(--primary) / 0.1);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
